@@ -1,0 +1,16 @@
+<table class="table" ng-controller="data_employees">
+    <thead>
+        <tr>
+            <th>employee</th>
+        </tr>
+    </thead>
+    <tbody ng-repeat="employee in employees">
+        <tr>
+            <td>
+                    <a href="/employee/{{employee._id}}">
+                        {{employee.name}}: {{employee.gender}}
+                </a>
+            </td>
+        </tr>
+    </tbody>
+</table>
