@@ -31,6 +31,6 @@ function do_create(req, res) {
     console.log('creating employee');
 }
 
-function do_update(res, req) {
-    console.log(res.body);
+function do_update(req, res) {
+    console.log('updating record');
 }
