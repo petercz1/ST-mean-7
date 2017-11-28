@@ -5,6 +5,7 @@ var frontend_app = angular.module('employees', ['ngRoute']);
 frontend_app.config(routes_function);
 frontend_app.controller('data_employees', do_data_employees);
 frontend_app.controller('single_controller', do_single_employees);
+frontend_app.controller('data_test', do_test);
 
 function routes_function($routeProvider) {
   console.log('doing routes stuff');
@@ -13,12 +14,19 @@ function routes_function($routeProvider) {
       templateUrl: "partials/all.html",
       controller: "data_employees"
     })
+    .when("/test", {
+      templateUrl: "partials/test.html",
+      controller: "data_test"
+    })
     .when("/employee/:_id", {
       templateUrl: "partials/single.htm'",
       controller: "single_controller"
     });
 }
 
+function do_test(params) {
+    
+}
 function do_data_employees($scope, $http) {
   console.log('getting employees');
   $http.get('/api/v7/read').then(function (server_object) {
