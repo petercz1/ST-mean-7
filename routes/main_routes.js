@@ -10,4 +10,8 @@ function do_homepage(req, res) {
 
 // api
 
-router.get('/api/v7/')
+router.get('/api/v7/read', do_read);
+router.get('/api/v7/read/:_id',do_single_read);
+router.post('/api/v7/read', do_read);
+router.get('/api/v7/read', do_read);
+router.get('/api/v7/read', do_read);
