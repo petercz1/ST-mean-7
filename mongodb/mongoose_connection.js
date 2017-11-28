@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
-var url = 'mongodb://localhost:27500/employees';
+var url = 'mongodb://localhost:27500/people';
 mongoose.connect(url, {useMongoClient: true});
 
 var contact_structure = {
@@ -19,5 +19,5 @@ var employee_structure = {
 
 var employee_schema = new mongoose.Schema(employee_structure);
 
-
+var EMPLOYEECLASS = mongoose.model('employee_schema);
 
