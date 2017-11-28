@@ -19,10 +19,7 @@ router.delete('/api/v7/delete', do_delete);
 
 function do_read(req, res) {
   console.log('getting all records');
-  EMPLOYEECLASS.find({}, {
-      name: 1,
-      gender: 1
-    })
+  EMPLOYEECLASS.find()
     .then(function (results) {
       console.log(results);
       res.json(results);
