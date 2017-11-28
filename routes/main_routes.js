@@ -50,6 +50,9 @@ function do_create(req, res) {
 function do_update(req, res) {
   console.log('updating record');
   console.log(req.body);
+  var update = {
+      $set:{}
+  }
 }
 
 function do_delete(req, res) {
