@@ -32,8 +32,8 @@ function do_single_employees($scope, $http, $routeParams) {
   console.log($routeParams);
   $http.get('/api/v7/read/' + $routeParams._id)
     .then(function (server_object) {
-      console.log(server_object);
       $scope.employee = server_object.data;
+      console.log($scope.employee);
     });
 
 }
