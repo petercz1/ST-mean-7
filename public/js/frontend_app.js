@@ -14,7 +14,7 @@ function routes_function($routeProvider) {
       templateUrl: "partials/all.html",
       controller: "data_employees"
     })
-    .when("/test", {
+    .when("/test/:_id", {
       templateUrl: "partials/test.html",
       controller: "data_test"
     })
@@ -24,10 +24,13 @@ function routes_function($routeProvider) {
     });
 }
 
-function do_test($scope, $http) {
-    console.log('doing test');
-    $scope.message = 'working...';
+function do_test($scope, $http, $routeParams) {
+  console.log('doing test');
+  console.log($routeParams);
+  $scope.message = 'working...';
+
 }
+
 function do_data_employees($scope, $http) {
   console.log('getting employees');
   $http.get('/api/v7/read').then(function (server_object) {
