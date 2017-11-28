@@ -18,5 +18,15 @@ router.delete('/api/v7/read', do_delete);
 
 function do_read(req, res) {
     console.log('getting all records');
-    
+
+}
+
+function do_single_read(req, res) {
+    console.log('getting single record');
+    console.log(req.params);
+
+}
+
+function do_create(req, res) {
+    console.log('creating employee');
 }
