@@ -19,7 +19,7 @@ function routes_function($routeProvider) {
       controller: "data_test"
     })
     .when("/employee/:_id", {
-      templateUrl: "partials/single.htm'",
+      templateUrl: "partials/single.html'",
       controller: "single_controller"
     });
 }
