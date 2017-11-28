@@ -27,7 +27,8 @@ function do_data_employees($scope, $http) {
   });
 }
 
-function do_single_employees($scope, $http) {
-    console.log('getting single employee');
+function do_single_employees($scope, $http, $routeParams) {
+  console.log('getting single employee');
+  console.log($routeParams);
 
 }
