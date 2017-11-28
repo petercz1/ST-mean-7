@@ -1,7 +1,13 @@
 console.log('loaded frontend app');
 
 var frontend_app = angular.module('employees',['ngRoute']);
+
+frontend_app.config(routes_function);
 frontend_app.controller('data_employees', do_data_employees);
+
+function routes_function($routeProvider) {
+    
+}
 
 function do_data_employees($scope, $http) {
     console.log('getting employees');
