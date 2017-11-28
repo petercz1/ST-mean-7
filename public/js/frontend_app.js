@@ -4,6 +4,8 @@ var frontend_app = angular.module('employees',['ngRoute']);
 
 frontend_app.config(routes_function);
 frontend_app.controller('data_employees', do_data_employees);
+frontend_app.controller('frontend_app.controller('data_employees', do_data_employees);
+', do_data_employees);
 
 function routes_function($routeProvider) {
     console.log('doing routes stuff');
