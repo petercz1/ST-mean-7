@@ -27,7 +27,9 @@
             <tbody ng-repeat="employee in employees">
                 <tr>
                     <td>
-                        <a href="/employee/{{}}"></a>
+                        <a href="/employee/{{employee._id}}">
+                            {{employee.name}}: {{employee.gender}}
+                        </a>
                     </td>
                 </tr>
             </tbody>
