@@ -19,5 +19,6 @@ var employee_structure = {
 
 var employee_schema = new mongoose.Schema(employee_structure);
 
-var EMPLOYEECLASS = mongoose.model('employee_schema);
+var EMPLOYEECLASS = mongoose.model('employees', employee_schema);
 
+module.exports = EMPLOYEECLASS;

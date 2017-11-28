@@ -7,3 +7,7 @@ function do_homepage(req, res) {
     console.log('doing homepage');
     res.render('index');
 }
+
+// api
+
+router.get('/api/v7/')
