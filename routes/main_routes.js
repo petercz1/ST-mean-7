@@ -20,15 +20,22 @@ router.delete('/api/v7/read', do_delete);
 function do_read(req, res) {
   console.log('getting all records');
   EMPLOYEECLASS.find({}, {
-    name: 1,
-    gender: 1
-  }).then();
+      name: 1,
+      gender: 1
+    })
+    .then(function (results) {
+      console.log(results);
+      res.json(results);
+    });
 }
 
 function do_single_read(req, res) {
   console.log('getting single record');
   console.log(req.params);
-  EMPLOYEECLASS.findById(req.params._id).then();
+  EMPLOYEECLASS.findById(req.params._id).then(function (result) {
+    console.log(result);
+    res.json(result); // sends a SINGLE employee back!
+  });
 }
 
 function do_create(req, res) {
@@ -38,24 +45,49 @@ function do_create(req, res) {
     name: req.body.name,
     gender: req.body.gender,
     contact: {
-        email: req.body.email,
-        cell: req.body.cell,
-        city: req.body.city
+      email: req.body.email,
+      cell: req.body.cell,
+      city: req.body.city
     }
   }
   var employee = new EMPLOYEECLASS(data);
-  employee.save().then();
+  employee.save().then(function (result) {
+    console.log(result);
+    res.json({
+      message: 'backend created!'
+    });
+  });
 }
 
 function do_update(req, res) {
   console.log('updating record');
   console.log(req.body);
   var update = {
-      $set:{}
+    $set: {
+      name: req.body.name,
+      gender: req.body.gender,
+      contact: {
+        email: req.body.email,
+        cell: req.body.cell,
+        city: req.body.city
+      }
+    }
   }
+  EMPLOYEECLASS.findByIdAndUpdate(req.body._id, update).then(function (result) {
+    console.log(result);
+    res.json({
+      message: 'backend updated!'
+    });
+  });
 }
 
 function do_delete(req, res) {
   console.log('deleting employee');
   console.log(req.params);
+  EMPLOYEECLASS.findByIdAndRemove(req.params._id).then(function (result) {
+    console.log(result);
+    res.json({
+      message: 'backend deleted!'
+    });
+  });
 }
