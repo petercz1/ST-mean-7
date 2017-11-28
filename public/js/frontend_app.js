@@ -13,7 +13,7 @@ function routes_function($routeProvider) {
       templateUrl: "partials/all.html",
       controller: "data_employees"
     })
-    .when("/single/:_id", {
+    .when("/employee/:_id", {
       templateUrl: "partials/single.htm'",
       controller: "single_controller"
     });
