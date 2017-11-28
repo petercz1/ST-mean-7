@@ -30,3 +30,7 @@ function do_single_read(req, res) {
 function do_create(req, res) {
     console.log('creating employee');
 }
+
+function do_update(res, req) {
+    console.log(res.body);
+}
