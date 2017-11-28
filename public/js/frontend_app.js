@@ -6,7 +6,19 @@ frontend_app.config(routes_function);
 frontend_app.controller('data_employees', do_data_employees);
 
 function routes_function($routeProvider) {
-    
+    console.log('doing routes stuff');
+    $routeProvider
+    .when("/", {
+        templateUrl : "partials/all.html"
+    })
+    .when("/single", {
+        templateUrl : "single.htm'",
+        controller : "single_controller"
+    })
+    .when("/paris", {
+        templateUrl : "paris.htm",
+        controller : "parisCtrl"
+    });
 }
 
 function do_data_employees($scope, $http) {
