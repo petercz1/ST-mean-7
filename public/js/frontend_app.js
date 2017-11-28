@@ -13,7 +13,7 @@ function routes_function($routeProvider) {
       templateUrl: "partials/all.html",
       controller: "data_employees"
     })
-    .when("/single", {
+    .when("/single/:_id", {
       templateUrl: "partials/single.htm'",
       controller: "single_controller"
     });
@@ -29,5 +29,5 @@ function do_data_employees($scope, $http) {
 
 function do_single_employees($scope, $http) {
     console.log('getting single employee');
-    
+
 }
