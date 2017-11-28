@@ -9,11 +9,15 @@ var contact_structure = {
     city: String
 }
 
-//var contact_schema = new mongoose.Schema(contact_structure);
+var contact_schema = new mongoose.Schema(contact_structure);
 
 var employee_structure = {
     name: String,
     gender: String,
-    contact: contact_structure
+    contact: contact_schema
 }
+
+var employee_schema = new mongoose.Schema(employee_structure);
+
+
 
