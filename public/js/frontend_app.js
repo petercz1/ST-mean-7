@@ -9,15 +9,12 @@ function routes_function($routeProvider) {
     console.log('doing routes stuff');
     $routeProvider
     .when("/", {
-        templateUrl : "partials/all.html"
+        templateUrl : "partials/all.html",
+        controller : "data_employees"        
     })
     .when("/single", {
-        templateUrl : "single.htm'",
+        templateUrl : "partials/single.htm'",
         controller : "single_controller"
-    })
-    .when("/paris", {
-        templateUrl : "paris.htm",
-        controller : "parisCtrl"
     });
 }
 
