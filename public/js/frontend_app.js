@@ -24,8 +24,8 @@ function routes_function($routeProvider) {
     });
 }
 
-function do_test(params) {
-    
+function do_test($scope, $http) {
+    console.log('doing test');
 }
 function do_data_employees($scope, $http) {
   console.log('getting employees');
