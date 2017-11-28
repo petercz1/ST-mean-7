@@ -8,3 +8,7 @@ var contact_structure = {
     cell: String,
     city: String
 }
+
+var contact_schema = new mongoose.Schema(contact_structure);
+
+var employee_structure = 
